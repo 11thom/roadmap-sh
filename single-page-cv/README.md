@@ -11,3 +11,5 @@ The goal of this project is to teach you how to create a structured, single-page
 - SEO meta tags in the head section.
 - OG tags for better social media sharing.
 - A favicon linked in the head section.
+
+[project url](https://roadmap.sh/projects/single-page-cv)
