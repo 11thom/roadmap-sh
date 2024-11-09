@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessible Form UI</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="form-container">
+      <form action="#" method="post">
+        <div class="wrapper">
+          <div class="form-section">
+            <label for="full-name">Full Name</label>
+            <input
+              type="text"
+              name="full-name"
+              id="full-name"
+              placeholder="What should we call you?"
+              aria-required="true"
+            />
+          </div>
+
+          <div class="form-section">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="john@doe.com"
+              aria-required="true"
+              aria-invalid="true"
+            />
+            <span class="error-msg">Email is already taken</span>
+          </div>
+
+          <div class="form-section password-container">
+            <label for="password">Enter Password</label>
+            <div class="password-input">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="xxxxxxxx"
+                aria-required="true"
+              />
+              <button
+                type="button"
+                class="show-password"
+                aria-pressed="false"
+                aria-label="Password is hidden"
+              >
+                <i class="ri-eye-fill"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="form-section password-container">
+            <label for="confirm-password">Confirm Password</label>
+            <div class="password-input">
+              <input
+                type="password"
+                name="confirm-password"
+                id="confirm-password"
+                placeholder="xxxxxxxx"
+                aria-required="true"
+              />
+              <button
+                type="button"
+                class="confirm-show-password"
+                aria-pressed="false"
+                aria-label="Password is hidden"
+              >
+                <i class="ri-eye-fill"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <button type="submit" class="update-profile-btn">
+              Update Profile
+            </button>
+          </div>
+        </div>
+
+        <div class="completeness">
+          <div class="progress-container">
+            <div class="progress-bar">
+              <progress
+                value="65"
+                min="0"
+                max="100"
+                style="visibility: hidden; height: 0; width: 0"
+              ></progress>
+            </div>
+          </div>
+
+          <div class="form-checklist">
+            <ul class="checklist">
+              <li class="checked">Create Account</li>
+              <li class="checked">Update Roadmap Progress</li>
+              <li class="checked">Setup Public Profile</li>
+              <li>Complete your first project</li>
+              <li>Invite your friends</li>
+            </ul>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

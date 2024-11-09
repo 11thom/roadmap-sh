@@ -1,0 +1,164 @@
+/* global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  font-size: 1.2rem;
+}
+
+/* general styling */
+.form-container {
+  border: 2px solid black;
+  border-radius: 20px;
+  max-width: 768px;
+  padding: 20px;
+}
+
+.wrapper {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 300px;
+  margin-right: 5px;
+}
+
+.completeness {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 300px;
+  margin-left: 5px;
+}
+
+.form-section input:focus,
+.password-input input:focus {
+  border-color: rgb(3, 184, 33);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* form styling */
+.form-section {
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.form-section label {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.form-section input {
+  border: 2px solid black;
+  border-radius: 6px;
+  outline: none;
+  padding: 10px 5px;
+  width: 100%;
+}
+
+#email {
+  margin-bottom: 5px;
+  border: 2px solid rgb(252, 62, 62);
+}
+
+#email::placeholder {
+  color: rgb(252, 62, 62);
+}
+
+.error-msg {
+  color: rgb(252, 62, 62);
+  font-size: 0.9rem;
+  margin-left: 5px;
+}
+
+/* passwords */
+.password-input {
+  position: relative;
+}
+
+.password-input button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: 1.5rem;
+}
+
+/* update profile */
+.update-profile-btn {
+  cursor: pointer;
+  padding: 15px 5px;
+  border: 1px solid black;
+  border-radius: 8px;
+  background: none;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  background-color: #000;
+  color: #fff;
+}
+
+/* progress bar */
+.progress-container {
+  display: flex;
+  align-items: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 200px;
+  width: 200px;
+  margin-bottom: 15px;
+}
+
+.progress-percent {
+  font-size: 2rem;
+}
+
+.progress-bar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, white 79%, transparent 80% 100%),
+    conic-gradient(rgb(3, 184, 33) 65%, rgb(160, 233, 172) 0);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-bar::before {
+  content: "65%";
+  font-size: 2rem;
+}
+
+/* checklist */
+.form-checklist {
+  padding: 10px;
+  background-color: #ebebeb;
+  height: 250px;
+  width: 200px;
+  border: 1px solid #ebebeb;
+  border-radius: 20px;
+}
+
+.form-checklist .checklist {
+  font-size: 1rem;
+  list-style: none;
+  margin: 10px;
+  line-height: 1.5;
+}
+
+.checked {
+  text-decoration: line-through;
+  color: #a3a3a3;
+}
